@@ -7,6 +7,8 @@ window.addEventListener("load", (event) => {
   listItemBis = document.querySelectorAll(".list-item-2");
   listCheckbox = document.querySelectorAll(".checkbox");
   renseignement = document.querySelectorAll(".renseignement");
+  body= document.querySelector('#body');
+  listScroll = document.querySelectorAll('.list');
   listCheckbox.forEach((element) => {
     element.addEventListener("click", () => {
       listCheckbox[3].checked = true;
@@ -18,11 +20,19 @@ window.addEventListener("load", (event) => {
     });
     });
   selectBtn.addEventListener("click", () => {
-    option.classList.remove("hidden");
+    if(option.classList.contains('hidden')){
+    option.classList.remove("hidden");}
+    else{
+      option.classList.toggle('hidden')
+    }
   });
 
   selectBtnBis.addEventListener("click", () => {
-    optionBis.classList.remove("hidden");
+    if(optionBis.classList.contains('hidden')){
+      optionBis.classList.remove("hidden");}
+      else{
+        optionBis.classList.toggle('hidden')
+      }
   });
 
   listItem.forEach((element) => {
